@@ -79,16 +79,15 @@ document.getElementById('start-btn').addEventListener('click', async () => {
         await new Promise(res => setTimeout(res, 1200));
     }
 
-    // After hack is successful, prompt the user again
+    // After hack is successful, alert the user again
     setTimeout(() => {
-        const answer = prompt("SYSTEM HACKED.\nDo you want to continue? (yes/no)");
+        const answer = alert("SYSTEM HACKED SUCCESSFULLY...");
         if (answer && answer.toLowerCase().startsWith('y')) {
-            alert("Reinitializing hack sequence...");
             document.getElementById('start-btn').click();
         } else {
-            consoleDiv.innerHTML += "<br><b style='color:#ff3333;'>Session Ended. Stay safe, hacker!</b>";
+            consoleDiv.innerHTML += "<br><b style='color:#ff3333;'> your System will be hacked..</b>";
         }
-    }, 1000);
+    }, );
 });
 
 // Matrix binary rain effect
